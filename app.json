@@ -1,0 +1,18 @@
+{
+  "name": "apollo-chat-graphql-server",
+  "description": "Apollo Chat GraphQL Server",
+  "repository": "https://github.com/gaston23/apollo-chat-graphql-server",
+  "scripts": {
+  },
+  "env": {
+    "NPM_CONFIG_PRODUCTION": {
+      "description": "Indicate npm that it needs to install all dependencies, including dev.",
+      "value": false
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-nodejs"
+    }
+  ]
+}

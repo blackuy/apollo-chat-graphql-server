@@ -1,0 +1,80 @@
+scalar Date
+
+type User {
+  id: ID!
+  lastIP: String
+  lastLoginAt: Date
+  username: String!
+  createdAt: Date!
+  channels: [Channel]
+}
+
+type Channel {
+  id: ID!
+  name: String!
+  createdAt: Date!
+  participants: [User]
+  participantCount: Int
+  messages(limit: Int!): [Message]
+}
+
+type Message {
+  id: ID!
+  indexInChannel: Int
+  createdAt: Date!
+  createdBy: User!
+  channel: Channel!
+  text: String!
+}
+
+type JoinResult {
+  user: User!
+  channel: Channel!
+}
+
+type Query {
+  channels: [Channel]
+  channel(
+    channelID: ID!
+  ): Channel
+  messagesForChannel(
+    channelID: ID!
+  ): [Message]
+  users: [User]
+  user(id: ID!): User
+}
+
+type Mutation {
+  typing(
+    userID: ID!,    
+    channelID: ID!
+  ): Boolean
+  join(
+    username: String!,
+    channelName: String!
+  ): JoinResult
+  messageNew(
+    channelID: ID!, 
+    userID: ID!,
+    text: String!
+  ): Message
+}
+
+type Subscription {
+  onChannelAdded: Channel 
+  onTypingIndicatorChanged(
+    channelID: ID!
+  ): [User]
+  onMessageAdded(
+    channelID: ID!
+  ): Message
+  onMemberJoin(
+    channelID: ID!
+  ): User
+}
+
+schema {
+  query: Query
+  mutation: Mutation
+  subscription: Subscription
+}

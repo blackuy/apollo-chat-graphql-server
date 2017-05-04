@@ -2,30 +2,28 @@ import mongoose from 'mongoose'
 import SchemasNames from './schemas.names'
 import BaseSchema from './base.schema'
 
-const SCHEMA_NAME = SchemasNames.User
+const SCHEMA_NAME = SchemasNames.Message
 
 const Schema = new mongoose.Schema({
-  username: {
+  text: {
     type: String,
     required: true
   },
-  ip: {
-    type: String
-  },
-  mobileNumber: {
-    type: String
-  },
   createdAt: {
     type: Date,
-    default: Date.now
+    default: Date.now,
+    required: true
   },
-  lastLoginAt: {
-    type: Date
-  },
-  channels: [{
+  createdBy: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: SchemasNames.Channel
-  }]
+    ref: SchemasNames.User,
+    required: true
+  },
+  channel: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: SchemasNames.Channel,
+    required: true
+  }
 })
 
 class SchemaExtension extends BaseSchema {

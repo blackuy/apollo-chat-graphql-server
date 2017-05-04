@@ -49,3 +49,8 @@ node_modules
 
 # .env
 .env
+.env.dev
+.env.production
+
+dist
+public
