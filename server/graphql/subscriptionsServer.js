@@ -40,7 +40,7 @@ export default ({ schema }) => {
   const subscriptionServer = new SubscriptionServer( // eslint-disable-line 
     {
       onConnect: async (connectionParams, ws) => {
-        console.log('✅  SubscriptionServer onConnect 🌏!', ws._socket.remprocess.env.OPTICS_API_KEYteAddress, ws._socket.remotePort)
+        console.log('✅  SubscriptionServer onConnect 🌏!', ws._socket)
       },
       onSubscribe: async (message, params, wsRequest) => {
         console.log('✅  SubscriptionServer onSubscribe 😄')

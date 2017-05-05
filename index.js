@@ -23,4 +23,6 @@ mongoose.connection.on('error', () => {
   throw new Error(`unable to connect to database: ${mongoUri}`)
 })
 
+console.log('Process!', {process: process})
+
 export default app

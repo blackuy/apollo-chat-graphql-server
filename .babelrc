@@ -1,23 +1,23 @@
 {
-  'presets': [
-    'es2017',
-    'es2015',
-    'stage-0',
-    'stage-1',
-    'stage-2',
-    'stage-3'
+  "presets": [
+    "es2017",
+    "es2015",
+    "stage-0",
+    "stage-1",
+    "stage-2",
+    "stage-3"
   ],
-  'plugins': [
-    'babel-plugin-inline-import',
-    'transform-decorators',
-    'transform-runtime',
-    'transform-decorators-legacy',
-    'transform-class-properties',
+  "plugins": [
+    "babel-plugin-inline-import",
+    "transform-decorators",
+    "transform-runtime",
+    "transform-decorators-legacy",
+    "transform-class-properties",
     [
-      'babel-plugin-webpack-loaders',
+      "babel-plugin-webpack-loaders",
       {
-        'config': './webpack.config.js',
-        'verbose': true,
+        "config": "./webpack.config.js",
+        "verbose": true,
       }
     ]    
   ]
