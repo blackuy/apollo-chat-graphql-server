@@ -8,6 +8,7 @@
     "stage-3"
   ],
   "plugins": [
+    "transform-promise-to-bluebird",
     "babel-plugin-inline-import",
     "transform-decorators",
     "transform-runtime",

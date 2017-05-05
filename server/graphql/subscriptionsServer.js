@@ -40,7 +40,7 @@ export default ({ schema }) => {
   const subscriptionServer = new SubscriptionServer( // eslint-disable-line 
     {
       onConnect: async (connectionParams, ws) => {
-        console.log('✅  SubscriptionServer onConnect 🌏!', ws._socket)
+        console.log('✅  SubscriptionServer onConnect 🌏!', ws._socket.remoteAddress, ws._socket.remotePort)
       },
       onSubscribe: async (message, params, wsRequest) => {
         console.log('✅  SubscriptionServer onSubscribe 😄')
