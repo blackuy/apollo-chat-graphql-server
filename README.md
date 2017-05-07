@@ -2,7 +2,7 @@
 
 [Client Code: gaston23/apollo-chat-graphql-client](http://github.com/gaston23/apollo-chat-graphql-client)
 
-### DEMO Endpoints
+### DEMO Server Endpoints
 
 - GraphQL Apollo: [https://apollo-chat-api.black.uy/graphql](https://apollo-chat-api.black.uy/graphql)
 - GraphiQL: [https://apollo-chat-api.black.uy/graphiql](https://apollo-chat-api.black.uy/graphiql)
