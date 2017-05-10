@@ -23,3 +23,7 @@ TODO
 
 ### Contribute
 Please contribute to the project if you know how to make it better, including this README :)
+
+### Creator 
+Gaston Morixe [gaston@black.uy](mailto:gaston@black.uy)  
+[Black Experiments black.uy](http://black.uy)
